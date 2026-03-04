@@ -1,0 +1,9 @@
+# netlify.toml
+[build]
+command = "hugo"
+publish = "public"
+
+[build.environment]
+HUGO_VERSION = "0.119.0"   # pick a supported version you want
+# Optional: use the extended binary if your site needs it:
+# HUGO_EXTENDED = "true"
