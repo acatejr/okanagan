@@ -1,0 +1,17 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "2007 Okanagan Camper Van For Sale"
+
+[params]
+  price = "$20,000 OBO"
+  location = "Tucson, AZ"
+  year = "2007"
+  make = "Ford"
+  model = "E-350 Super Duty"
+  conversion = "Okanagan"
+  engine = "5.4L Triton V8"
+  mileage = "~92,000"
+  vin = "1FDNS24L47DA36272"
+  transmission = "Automatic"
+  fuel = "Gasoline"
+  class = "Class B Camper Van"

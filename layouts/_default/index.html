@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Site.Title }}</title>
+  <meta name="description" content="2007 Ford E-350 Okanagan Camper Van for sale in Tucson, AZ. Fully self-contained Class B motorhome with 5.4L Triton V8, ~92K miles. $20,000 OBO.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">For Sale</span>
+      <h1>2007 Okanagan<br><span class="hero-sub">Ford E-350 Camper Van</span></h1>
+      <p class="hero-price">{{ .Site.Params.price }}</p>
+      <p class="hero-location">📍 {{ .Site.Params.location }}</p>
+    </div>
+  </header>
+
+  <!-- Photo Gallery -->
+  <section class="gallery" id="photos">
+    <h2>Photos</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-item--wide">
+        <img src="/images/driver-side.jpg" alt="2007 Okanagan Camper Van - Driver Side" loading="lazy" onclick="openLightbox(this)">
+        <span class="gallery-label">Driver Side</span>
+      </div>
+      <div class="gallery-item gallery-item--wide">
+        <img src="/images/passenger-side.jpg" alt="2007 Okanagan Camper Van - Passenger Side" loading="lazy" onclick="openLightbox(this)">
+        <span class="gallery-label">Passenger Side</span>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/front-view.jpg" alt="2007 Okanagan Camper Van - Front View" loading="lazy" onclick="openLightbox(this)">
+        <span class="gallery-label">Front</span>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/rear-view.jpg" alt="2007 Okanagan Camper Van - Rear View" loading="lazy" onclick="openLightbox(this)">
+        <span class="gallery-label">Rear</span>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/interior-cab.jpg" alt="2007 Okanagan Camper Van - Overcab Sleeping Area" loading="lazy" onclick="openLightbox(this)">
+        <span class="gallery-label">Overcab Bed</span>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/interior-kitchen.jpg" alt="2007 Okanagan Camper Van - Kitchen & Dinette" loading="lazy" onclick="openLightbox(this)">
+        <span class="gallery-label">Kitchen & Dinette</span>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/odometer.jpg" alt="2007 Okanagan Camper Van - Odometer showing ~92K miles" loading="lazy" onclick="openLightbox(this)">
+        <span class="gallery-label">Odometer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Vehicle Specs -->
+  <section class="specs" id="specs">
+    <h2>Vehicle Specifications</h2>
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div class="spec-icon">🚐</div>
+        <div class="spec-label">Type</div>
+        <div class="spec-value">{{ .Site.Params.class }}</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">📅</div>
+        <div class="spec-label">Year</div>
+        <div class="spec-value">{{ .Site.Params.year }}</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🔧</div>
+        <div class="spec-label">Engine</div>
+        <div class="spec-value">{{ .Site.Params.engine }}</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">⛽</div>
+        <div class="spec-label">Fuel</div>
+        <div class="spec-value">{{ .Site.Params.fuel }}</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🛣️</div>
+        <div class="spec-label">Mileage</div>
+        <div class="spec-value">{{ .Site.Params.mileage }}</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">⚙️</div>
+        <div class="spec-label">Transmission</div>
+        <div class="spec-value">{{ .Site.Params.transmission }}</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🏭</div>
+        <div class="spec-label">Base Vehicle</div>
+        <div class="spec-value">{{ .Site.Params.make }} {{ .Site.Params.model }}</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🍁</div>
+        <div class="spec-label">Conversion</div>
+        <div class="spec-value">{{ .Site.Params.conversion }}</div>
+      </div>
+    </div>
+    <p class="vin-display">VIN: <code>{{ .Site.Params.vin }}</code></p>
+  </section>
+
+  <!-- Amenities -->
+  <section class="amenities" id="amenities">
+    <h2>Camper Amenities</h2>
+    <p class="section-intro">Fully self-contained — everything you need for weekend getaways or extended road trips.</p>
+    <div class="amenities-grid">
+      <div class="amenity">
+        <span class="amenity-icon">🚿</span>
+        <span class="amenity-name">Toilet & Shower</span>
+      </div>
+      <div class="amenity">
+        <span class="amenity-icon">🍳</span>
+        <span class="amenity-name">3-Burner Stove with Oven</span>
+      </div>
+      <div class="amenity">
+        <span class="amenity-icon">🧊</span>
+        <span class="amenity-name">Refrigerator</span>
+      </div>
+      <div class="amenity">
+        <span class="amenity-icon">🔥</span>
+        <span class="amenity-name">Propane Furnace / Heater</span>
+      </div>
+      <div class="amenity">
+        <span class="amenity-icon">❄️</span>
+        <span class="amenity-name">Roof-Mounted A/C</span>
+      </div>
+      <div class="amenity">
+        <span class="amenity-icon">🏕️</span>
+        <span class="amenity-name">Exterior Awning</span>
+      </div>
+      <div class="amenity">
+        <span class="amenity-icon">🛏️</span>
+        <span class="amenity-name">Overcab Sleeping Area</span>
+      </div>
+      <div class="amenity">
+        <span class="amenity-icon">🪑</span>
+        <span class="amenity-name">Dinette Seating</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Known Issues -->
+  <section class="issues" id="issues">
+    <h2>Known Issues</h2>
+    <p class="section-intro">Full transparency — priced accordingly for these minor, low-cost repairs.</p>
+    <div class="issues-list">
+      <div class="issue-card">
+        <div class="issue-icon">💨</div>
+        <div class="issue-content">
+          <strong>Dashboard HVAC Blower Fans</strong>
+          <p>Not currently working. Likely a wiring issue in the dash — not a compressor or system failure. The roof-mounted camper A/C works independently.</p>
+        </div>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">🔧</div>
+        <div class="issue-content">
+          <strong>Exterior Drain Valve</strong>
+          <p>The toilet/shower exterior drain valve needs to be reattached.</p>
+        </div>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">⛱️</div>
+        <div class="issue-content">
+          <strong>Awning Support Arms</strong>
+          <p>The awning support arm anchor points need repair or replacement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why This Van -->
+  <section class="why" id="why">
+    <h2>Why This Van?</h2>
+    <div class="why-content">
+      <div class="why-card">
+        <h3>🍁 Quality Canadian Build</h3>
+        <p>Okanagan is renowned for superior build quality and insulation. These vans were built in Canada to handle serious weather — a cut above typical conversions.</p>
+      </div>
+      <div class="why-card">
+        <h3>🔩 Proven Platform</h3>
+        <p>The Ford E-350 with the 5.4L Triton V8 is one of the most proven platforms ever made. Millions on the road, and parts are cheap and available at any auto store.</p>
+      </div>
+      <div class="why-card">
+        <h3>🛣️ Plenty of Life Left</h3>
+        <p>At under 92,000 miles, this drivetrain has a lot of road ahead. The 5.4L V8 is known to go well past 200K with basic maintenance.</p>
+      </div>
+      <div class="why-card">
+        <h3>🏜️ Arizona Van</h3>
+        <p>Desert vehicle — no rust, no salt damage. Arizona is kind to vehicles, and it shows on this van's clean exterior.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="cta-inner">
+      <h2>Interested?</h2>
+      <p class="cta-price">{{ .Site.Params.price }}</p>
+      <p>Clean title in hand. Located in Tucson, AZ.<br>Cash or cashier's check preferred. Serious inquiries only.</p>
+      <p class="cta-phone"><a href="tel:5209776912">📞 (520) 977-6912</a></p>
+      <p class="cta-note">Call or text to schedule a viewing.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>2007 Ford E-350 Okanagan Camper Van &middot; Tucson, AZ &middot; {{ now.Year }}</p>
+  </footer>
+
+  <script>
+    function openLightbox(imgEl) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = imgEl.src;
+      lightboxImg.alt = imgEl.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
