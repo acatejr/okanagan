@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
 
@@ -28,31 +28,31 @@
     <h2>Photos</h2>
     <div class="gallery-grid">
       <div class="gallery-item gallery-item--wide">
-        <img src="/images/driver-side.jpg" alt="2007 Okanagan Camper Van - Driver Side" loading="lazy" onclick="openLightbox(this)">
+        <img src="{{ "images/driver-side.jpg" | relURL }}" alt="2007 Okanagan Camper Van - Driver Side" loading="lazy" onclick="openLightbox(this)">
         <span class="gallery-label">Driver Side</span>
       </div>
       <div class="gallery-item gallery-item--wide">
-        <img src="/images/passenger-side.jpg" alt="2007 Okanagan Camper Van - Passenger Side" loading="lazy" onclick="openLightbox(this)">
+        <img src="{{ "images/passenger-side.jpg" | relURL }}" alt="2007 Okanagan Camper Van - Passenger Side" loading="lazy" onclick="openLightbox(this)">
         <span class="gallery-label">Passenger Side</span>
       </div>
       <div class="gallery-item">
-        <img src="/images/front-view.jpg" alt="2007 Okanagan Camper Van - Front View" loading="lazy" onclick="openLightbox(this)">
+        <img src="{{ "images/front-view.jpg" | relURL }}" alt="2007 Okanagan Camper Van - Front View" loading="lazy" onclick="openLightbox(this)">
         <span class="gallery-label">Front</span>
       </div>
       <div class="gallery-item">
-        <img src="/images/rear-view.jpg" alt="2007 Okanagan Camper Van - Rear View" loading="lazy" onclick="openLightbox(this)">
+        <img src="{{ "images/rear-view.jpg" | relURL }}" alt="2007 Okanagan Camper Van - Rear View" loading="lazy" onclick="openLightbox(this)">
         <span class="gallery-label">Rear</span>
       </div>
       <div class="gallery-item">
-        <img src="/images/interior-cab.jpg" alt="2007 Okanagan Camper Van - Overcab Sleeping Area" loading="lazy" onclick="openLightbox(this)">
+        <img src="{{ "images/interior-cab.jpg" | relURL }}" alt="2007 Okanagan Camper Van - Overcab Sleeping Area" loading="lazy" onclick="openLightbox(this)">
         <span class="gallery-label">Overcab Bed</span>
       </div>
       <div class="gallery-item">
-        <img src="/images/interior-kitchen.jpg" alt="2007 Okanagan Camper Van - Kitchen & Dinette" loading="lazy" onclick="openLightbox(this)">
+        <img src="{{ "images/interior-kitchen.jpg" | relURL }}" alt="2007 Okanagan Camper Van - Kitchen & Dinette" loading="lazy" onclick="openLightbox(this)">
         <span class="gallery-label">Kitchen & Dinette</span>
       </div>
       <div class="gallery-item">
-        <img src="/images/odometer.jpg" alt="2007 Okanagan Camper Van - Odometer showing ~92K miles" loading="lazy" onclick="openLightbox(this)">
+        <img src="{{ "images/odometer.jpg" | relURL }}" alt="2007 Okanagan Camper Van - Odometer showing ~92K miles" loading="lazy" onclick="openLightbox(this)">
         <span class="gallery-label">Odometer</span>
       </div>
     </div>
